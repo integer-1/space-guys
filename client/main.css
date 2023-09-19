@@ -1,0 +1,16 @@
+body {
+  font-family: Roboto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+
+body {
+  width: 100%;
+  background-image: url(../public/space.jpg);
+  background-size: cover;
+  backdrop-filter: blur(2px);
+}
