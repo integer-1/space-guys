@@ -4,7 +4,6 @@ import request from 'superagent'
 import * as Path from 'node:path'
 import * as URL from 'node:url'
 import * as dotenv from 'dotenv'
-import welcome from './routes/welcome.ts'
 
 dotenv.config()
 const apiKey = process.env.SPACE_KEY
@@ -17,13 +16,11 @@ const server = express()
 server.use(express.json())
 server.use(express.static(join(__dirname, './public')))
 
-server.use('/api/v1/welcome', welcome)
-
 server.get('/api/v1/space', async (req, res) => {
   const response = await request.get(
     `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=2023-08-20&end_date=2023-09-20`
   )
-  res.json(response.body.result)
+  res.json(response.body)
 })
 
 export default server

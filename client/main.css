@@ -1,16 +1,23 @@
 body {
-  font-family: Roboto;
+  width: 100%;
+  background-color: rgb(225, 225, 225);
+  /* background-image: url(../public/space.jpg); */
+  /* background-size: cover; */
+  backdrop-filter: blur(2px);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  text-align: center;
 }
 
 h1 {
   text-align: center;
-  color: white;
-  padding: 50px;
+  color: black;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   width: 100%;
-  background-image: url(../public/space.jpg);
+  background-color: white;
   background-size: cover;
   backdrop-filter: blur(2px);
 }
