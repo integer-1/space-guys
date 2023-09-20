@@ -1,15 +1,9 @@
 import request from 'superagent'
-// import { Welcome } from '../models/welcome.ts'
+import { Apod } from '../models/welcome.ts'
 
 const serverURL = '/api/v1'
 
-// *** EXAMPLE ***
-// export async function getWelcome(): Promise<Welcome> {
-//   const response = await request.get(`${serverURL}/welcome`)
-//   return response.body
-// }
-// ***   ***   ***
-
-export async function getData() {
- 
+export default async function getData(): Promise<Apod[]> {
+  const response = await request.get(`${serverURL}/space`)
+  return response.body
 }
